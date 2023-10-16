@@ -1,15 +1,15 @@
 package com.platzi.market.domain;
 
 public class Category {
-    private long categoryId;
+    private int categoryId;
     private String category;
-    private Boolean active;
+    private boolean active;
 
-    public long getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 
@@ -21,11 +21,11 @@ public class Category {
         this.category = category;
     }
 
-    public Boolean getActive() {
+    public boolean isActive() {
         return active;
     }
 
-    public void setActive(Boolean active) {
+    public void setActive(boolean active) {
         this.active = active;
     }
 }

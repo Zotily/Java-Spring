@@ -1,19 +1,19 @@
 package com.platzi.market.domain;
 
 public class Product {
-    private long productId;
+    private int productId;
     private String name;
-    private long categoryId;
+    private int categoryId;
     private double price;
-    private long stock;
+    private int stock;
     private boolean active;
     private Category category;
 
-    public long getProductId() {
+    public int getProductId() {
         return productId;
     }
 
-    public void setProductId(long productId) {
+    public void setProductId(int productId) {
         this.productId = productId;
     }
 
@@ -25,11 +25,11 @@ public class Product {
         this.name = name;
     }
 
-    public long getCategoryId() {
+    public int getCategoryId() {
         return categoryId;
     }
 
-    public void setCategoryId(long categoryId) {
+    public void setCategoryId(int categoryId) {
         this.categoryId = categoryId;
     }
 
@@ -41,11 +41,11 @@ public class Product {
         this.price = price;
     }
 
-    public long getStock() {
+    public int getStock() {
         return stock;
     }
 
-    public void setStock(long stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 

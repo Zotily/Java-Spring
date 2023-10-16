@@ -9,12 +9,12 @@ public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
-    private Long idProducto;
+    private Integer idProducto;
 
     private String nombre;
 
     @Column(name = "id_categoria")
-    private Long idCategoria;
+    private Integer idCategoria;
 
     @Column(name = "codigo_barras")
     private String codigoBarras;
@@ -23,7 +23,7 @@ public class Producto {
     private Double precioVenta;
 
     @Column(name = "cantidad_stock")
-    private Long cantidadStock;
+    private Integer cantidadStock;
 
     private Boolean estado;
 
@@ -31,11 +31,11 @@ public class Producto {
     @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
     private Categoria categoria;
 
-    public Long getIdProducto() {
+    public Integer getIdProducto() {
         return idProducto;
     }
 
-    public void setIdProducto(Long idProducto) {
+    public void setIdProducto(Integer idProducto) {
         this.idProducto = idProducto;
     }
 
@@ -47,11 +47,11 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public Long getIdCategoria() {
+    public Integer getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(Long idCategoria) {
+    public void setIdCategoria(Integer idCategoria) {
         this.idCategoria = idCategoria;
     }
 
@@ -71,11 +71,11 @@ public class Producto {
         this.precioVenta = precioVenta;
     }
 
-    public Long getCantidadStock() {
+    public Integer getCantidadStock() {
         return cantidadStock;
     }
 
-    public void setCantidadStock(Long cantidadStock) {
+    public void setCantidadStock(Integer cantidadStock) {
         this.cantidadStock = cantidadStock;
     }
 
@@ -85,5 +85,13 @@ public class Producto {
 
     public void setEstado(Boolean estado) {
         this.estado = estado;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
     }
 }

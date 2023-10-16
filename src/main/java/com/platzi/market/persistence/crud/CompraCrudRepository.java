@@ -6,11 +6,14 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
-public interface CompraCrudRepository extends CrudRepository<Compra, Long> {
+public interface CompraCrudRepository extends CrudRepository<Compra, Integer> {
 
-    List<Compra> findByIdClienteOrderByIdCompraAsc(long idCliente);
-    List<Compra> findByFecha(LocalDateTime fecha);
-    List<Compra> findByFechaAndIdClienteOrderByIdCliente(LocalDateTime fecha, long idCliente);
-    List<Compra> findByFechaAndIdClienteAndMedioPagoOrderByFechaAsc(LocalDateTime fecha, long idCLiente, String medioPago);
+    Optional<List<Compra>> findByIdCliente(String idCliente);
+
+//    List<Compra> findByIdClienteOrderByIdCompraAsc(int idCliente);
+//    List<Compra> findByFecha(LocalDateTime fecha);
+//    List<Compra> findByFechaAndIdClienteOrderByIdCliente(LocalDateTime fecha, int idCliente);
+//    List<Compra> findByFechaAndIdClienteAndMedioPagoOrderByFechaAsc(LocalDateTime fecha, int idCLiente, String medioPago);
 }
